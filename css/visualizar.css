@@ -1,12 +1,17 @@
 .profile-card { 
   display: flex; 
-  border: 1px solid #000; 
+  border: 5px solid #3b5998;
+  background-color: #ffffff;
   width: 600px; 
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  padding: 10px;
  } 
  
  .left-column, .right-column { 
-  padding: 20px; } 
+  padding: 20px;
+  box-sizing: border-box;
+ } 
   
   .left-column { 
     width: 50%; 
@@ -15,27 +20,46 @@
 
    .right-column { 
     width: 50%; 
-    background-color: #e0e0e0; 
-    text-align: center; 
+    background-color: #222a35;
+    color:#ffffff; 
+    text-align: center;
+    box-sizing: border-box; 
   } 
 
   .left-column ul, .right-column ul { 
     list-style-type: none; 
     padding: 0; 
+    margin:0;
   } 
   
   .left-column li, .right-column li { 
     margin-bottom: 10px; 
   } 
+
+  .profile-banner{
+    width: 100%;
+    height: 100px;
+    background-image: url('https://i.postimg.cc/cCkhYKfX/aqua-logo-2.png');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+  }
   
   .profile-image { 
-    width: 100px; 
-    height: 100px; 
+    width: auto; 
+    height: auto; 
     background-color: #ccc; 
     border-radius: 50%; 
     margin: 0 auto; 
+    display: block;
   } 
-  
+
+  .profile-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
   .profile-name { 
     font-size: 1.2em; 
     font-weight: bold; 
