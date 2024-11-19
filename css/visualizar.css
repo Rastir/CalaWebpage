@@ -1,4 +1,4 @@
-.profile-card { 
+  .profile-card { 
   display: flex; 
   border: 5px solid #3b5998;
   background-color: #ffffff;
@@ -7,15 +7,28 @@
   box-sizing: border-box;
   padding: 10px;
  } 
+
+ .small-banner { 
+  width: 100%; 
+  height: 100px; 
+  background-size: cover; 
+  background-position: center; 
+  margin-bottom: 20px; 
+  background-color: transparent;
+ }
  
  .left-column, .right-column { 
   padding: 20px;
   box-sizing: border-box;
+  font-family: "Century Gothic", Arial, sans-serif;
  } 
   
   .left-column { 
     width: 50%; 
     background-color: #f0f0f0;
+    text-align: center;
+    box-sizing: border-box; 
+    font-family: "Century Gothic", Arial, sans-serif;
    } 
 
    .right-column { 
@@ -24,16 +37,19 @@
     color:#ffffff; 
     text-align: center;
     box-sizing: border-box; 
+    font-family: "Century Gothic", Arial, sans-serif;
   } 
 
   .left-column ul, .right-column ul { 
     list-style-type: none; 
     padding: 0; 
     margin:0;
+    font-family: "Century Gothic", Arial, sans-serif;
   } 
   
   .left-column li, .right-column li { 
     margin-bottom: 10px; 
+    font-family: "Century Gothic", Arial, sans-serif;
   } 
 
   .profile-banner{
@@ -68,4 +84,30 @@
   .observations { 
     margin-top: 20px; 
   }
+
+  .profile-box-title{
+    font-size: medium;
+  }
   
+  .visit-info {
+    margin-bottom: 20px;
+  }
+
+  .visit-label{
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .visit-number{
+    width: 130px;
+    height: 80px;
+    background-color: #8fabdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px auto;
+    border: 2px solid #8fabdc;
+    color: #ffffff;
+  }
