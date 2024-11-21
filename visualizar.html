@@ -151,8 +151,7 @@
 
                     <div class="form-group row">
                         <div class="col-sm-12 mb-3 mb-sm-0">
-                            <input type="text" class="form-control form-control-user" id="idAquaLover"
-                                placeholder="Id del Aqua Lover ?">
+                            <input type="text" class="form-control form-control-user" id="idAquaLover" placeholder="Id del Aqua Lover ?">
                         </div>
                     </div>
                     <button type="button" class="btn btn-facebook btn-user btn-block" id="buscarAquaLover">
@@ -170,12 +169,17 @@
                                     <p class="visit-label">Número de visita</p> 
                                 <div class="visit-number">12345</div> </div>
                                 <ul> 
-                                    <li><strong>Información:</strong></li> 
-                                    <li><strong>Alimentos y bebidas:</strong> Coordinar con Mayordomía</li> 
-                                    <li><strong>Experiencias:</strong> Reservar espacios en Alberca y Playa</li> 
-                                    <li><strong>Mayordomos:</strong> Alex / Isaías</li> 
-                                    <li><strong>Spa:</strong> Mantener disponibilidad</li> 
-                                    <li><strong>Observaciones:</strong> Reunión día 04 con Dirección 11:00 hrs y Recorrido por la Propiedad</li> 
+                                    <li class="info-item"><strong>INFORMACIÓN</strong></li> 
+                                    <li class="info-rectangles">Alimentos y bebidas</li>
+                                    <li class="info-item-text" id="foodInfo"> Coordinar con Mayordomía</li> 
+                                    <li class="info-rectangles">EXPERIENCIAS</li>
+                                    <li class="info-item-text">Reservar espacios en Alberca y Playa</li> 
+                                    <li class="info-rectangles"> MAYORDOMOS</li>
+                                    <li class="info-item-text">Alex / Isaías</li> 
+                                    <li class="info-rectangles">SPA</li>
+                                    <li class="info-item-text"> Mantener disponibilidad</li> 
+                                    <li class="info-rectangles">ALERGIAS</li> 
+                                    <li class="info-item-text" id="allergiesInfo"></li> 
                                 </ul> 
                             </div> 
                             <div class="right-column"> 
@@ -197,8 +201,6 @@
                             </div> 
                         </div>
                     </div>
-
-
                 </div>
 
 
@@ -243,6 +245,35 @@
     <script src="js/sb-admin-2.min.js"></script>
     <!-- Font Awesome script-->
     <script src="https://kit.fontawesome.com/ec5d2cd8cd.js" crossorigin="anonymous"></script>
+
+    <!---Heres the script to consume the api and carge the info to the profile card-->
+    <script>
+        document.getElementById('buscarAquaLover').addEventListener('click', async() =>{
+            const id = document.getElementById('idAquaLover').value;
+
+            try {
+                const response = await fetch(`http://vps-4437505-x.dattaweb.com:8080/personas/traer/${id}`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                const datos = await response.json();
+                // Rellenar los elementos con los datos recibidos
+                document.getElementById('profileName').textContent = datos.name || 'N/A';
+                document.getElementById('apellido').value = datos.lastName;
+                document.getElementById('email').value = datos.email;
+                document.getElementById('edad').value = datos.age;
+                document.getElementById('visita').value = datos.noVisit;
+                document.getElementById('foodInfo').textContent = datos.foodAndBeverages || 'N/A';
+                document.getElementById('experiencia').value = datos.experience;
+                document.getElementById('mayordomos').value = datos.butler;
+                document.getElementById('servicioMayordomia').value = datos.preference;
+                document.getElementById('allergiesInfo').value = datos.alergies;
+                document.getElementById('observaciones').value = datos.notes;
+            }catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
 </body>
 
 </html>
