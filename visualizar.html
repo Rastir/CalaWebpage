@@ -167,7 +167,7 @@
                                 <div class="small-banner" style="background-image: url('https://i.postimg.cc/cCkhYKfX/aqua-logo-2.png');"></div>
                                 <div class="visit-info"> 
                                     <p class="visit-label">Número de visita</p> 
-                                <div class="visit-number">12345</div> </div>
+                                <div class="visit-number" id="visitNumber">12345</div> </div>
                                 <ul> 
                                     <li class="info-item"><strong>INFORMACIÓN</strong></li> 
                                     <li class="info-rectangles">Alimentos y bebidas</li>
@@ -187,12 +187,12 @@
                                     <!--- aqui va el banner -->
                                 </div>
                                 <div class="profile-image"> 
-                                    <img src="https://i.postimg.cc/brx1FWJk/Patricio-Deduck.jpg" alt="Profile Image" />
+                                    <img src="https://i.postimg.cc/brx1FWJk/Patricio-Deduck.jpg" id="profileImage" alt="Profile Image" />
                                 </div> 
                                 <div class="profile-name" id="profileName">Patricio Deduck</div> 
                                 <div class="observations"> 
                                     <strong>Observaciones:</strong> 
-                                    <p>Este pato ha sufrido una fuerte herida de guerra en sus años de servicio, sufrió 
+                                    <p id="observationsInfo">Este pato ha sufrido una fuerte herida de guerra en sus años de servicio, sufrió 
                                         recientemente una vulcanizada debido a una roptura de la costura posterior, favor
                                         de extremar atenciones
                                     </p> 
@@ -289,9 +289,12 @@
                 if (document.getElementById('observationsInfo')) { 
                     document.getElementById('observationsInfo').textContent = data.notes !== null ? data.notes : 'N/A'; 
                 }
+                if (document.getElementById('profileImage')){
+                    document.getElementById('profileImage').src=data.profileImageURL ? data.profileImageURL :  'https://i.postimg.cc/jj0LRs1q/Aqualover-logo.jpg';
+                }
             } catch (error) {
                 console.error('Error al obtener los datos:', error);
-                alert('Error al obtener los datos. Por favor, intenta de nuevo.');
+                alert('Ningun Aqua Lover tiene este "ID" favor de intentar de nuevo.');
             }
         });
     </script>
