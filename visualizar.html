@@ -152,7 +152,8 @@
 
                     <div class="form-group row">
                         <div class="col-sm-12 mb-3 mb-sm-0">
-                            <input type="text" class="form-control form-control-user" id="idAquaLover" placeholder="Id del Aqua Lover ?">
+                            <input type="text" class="form-control form-control-user" id="idAquaLover"
+                                placeholder="Id del Aqua Lover ?">
                         </div>
                     </div>
                     <button type="button" class="btn btn-facebook btn-user btn-block" id="buscarAquaLover">
@@ -162,45 +163,58 @@
 
                     <!-- Here's the profile card-->
                     <div class="wrapper">
-                        <div class="profile-card"> 
-                            <div class="left-column"> 
-                                <div class="small-banner" style="background-image: url('https://i.postimg.cc/cCkhYKfX/aqua-logo-2.png');"></div>
-                                <div class="visit-info"> 
-                                    <p class="visit-label">Número de visita</p> 
-                                <div class="visit-number" id="visitNumber">12345</div> </div>
-                                <ul> 
-                                    <li class="info-item"><strong>INFORMACIÓN</strong></li> 
+                        <div class="profile-card">
+                            <div class="left-column">
+                                <div class="small-banner"
+                                    style="background-image: url('https://i.postimg.cc/cCkhYKfX/aqua-logo-2.png');">
+                                </div>
+                                <div class="visit-info">
+                                    <p class="visit-label">Número de visita</p>
+                                    <div class="visit-number" id="visitNumber">12345</div>
+                                </div>
+                                <ul>
+                                    <li class="info-item"><strong>INFORMACIÓN</strong></li>
                                     <li class="info-rectangles">Alimentos y bebidas</li>
-                                    <li class="info-item-text" id="foodInfo"> Coordinar con Mayordomía</li> 
+                                    <li class="info-item-text" id="foodInfo"> Coordinar con Mayordomía</li>
                                     <li class="info-rectangles">EXPERIENCIAS</li>
-                                    <li class="info-item-text" id="experienceInfo">Reservar espacios en Alberca y Playa</li>                                    
+                                    <li class="info-item-text" id="experienceInfo">Reservar espacios en Alberca y Playa
+                                    </li>
                                     <li class="info-rectangles"> MAYORDOMOS</li>
                                     <li class="info-item-text" id="butlerInfo">Alex / Isaías</li>
                                     <li class="info-rectangles">SPA</li>
                                     <li class="info-item-text" id="preferenceInfo">Mantener disponibilidad</li>
-                                    <li class="info-rectangles">ALERGIAS</li> 
+                                    <li class="info-rectangles">ALERGIAS</li>
                                     <li class="info-item-text" id="allergiesInfo">Ninguna</li>
-                                </ul> 
-                            </div> 
-                            <div class="right-column"> 
+                                </ul>
+                            </div>
+                            <div class="right-column">
                                 <div class="profile-banner">
                                     <!--- aqui va el banner -->
                                 </div>
-                                <div class="profile-image"> 
-                                    <img src="https://i.postimg.cc/brx1FWJk/Patricio-Deduck.jpg" id="profileImage" alt="Profile Image" />
-                                </div> 
-                                <div class="profile-name" id="profileName">Patricio Deduck</div> 
-                                <div class="observations"> 
-                                    <strong>Observaciones:</strong> 
-                                    <p id="observationsInfo">Este pato ha sufrido una fuerte herida de guerra en sus años de servicio, sufrió 
-                                        recientemente una vulcanizada debido a una roptura de la costura posterior, favor
+                                <div class="profile-image">
+                                    <img src="https://i.postimg.cc/brx1FWJk/Patricio-Deduck.jpg" id="profileImage"
+                                        alt="Profile Image" />
+                                </div>
+                                <div class="profile-name" id="profileName">Patricio Deduck</div>
+                                <div class="observations">
+                                    <strong>Observaciones:</strong>
+                                    <p id="observationsInfo">Este pato ha sufrido una fuerte herida de guerra en sus
+                                        años de servicio, sufrió
+                                        recientemente una vulcanizada debido a una roptura de la costura posterior,
+                                        favor
                                         de extremar atenciones
-                                    </p> 
-                                </div> 
-                            </div> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!---Here start the images carousel-->
+                        <div class="image-container">
+                            <p>Momentos ama</p>
                         </div>
                     </div>
                 </div>
+                <!--- Here ends the profile card-->
 
 
                 <!-- /.container-fluid -->
@@ -238,7 +252,10 @@
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -271,26 +288,40 @@
                 if (document.getElementById('foodInfo')) {
                     document.getElementById('foodInfo').textContent = data.foodAndBeverages !== null ? data.foodAndBeverages : 'N/A';
                 }
-                if (document.getElementById('experienceInfo')) { 
-                    document.getElementById('experienceInfo').textContent = data.experience !== null ? data.experience : 'N/A'; 
-                } 
-                if (document.getElementById('butlerInfo')) { 
-                    document.getElementById('butlerInfo').textContent = data.butler !== null ? data.butler : 'N/A'; 
-                } 
-                if (document.getElementById('preferenceInfo')) { 
-                    document.getElementById('preferenceInfo').textContent = data.preference !== null ? data.preference : 'N/A'; 
-                } 
-                if (document.getElementById('allergiesInfo')) { 
-                    document.getElementById('allergiesInfo').textContent = data.alergies !== null ? data.alergies : 'N/A'; 
-                } 
-                if (document.getElementById('profileName')) { 
-                    document.getElementById('profileName').textContent = (data.name ? data.name + ' ' : '') + (data.lastName || 'N/A'); 
-                } 
-                if (document.getElementById('observationsInfo')) { 
-                    document.getElementById('observationsInfo').textContent = data.notes !== null ? data.notes : 'N/A'; 
+                if (document.getElementById('experienceInfo')) {
+                    document.getElementById('experienceInfo').textContent = data.experience !== null ? data.experience : 'N/A';
                 }
-                if (document.getElementById('profileImage')){
-                    document.getElementById('profileImage').src=data.profileImageURL ? data.profileImageURL :  'https://i.postimg.cc/jj0LRs1q/Aqualover-logo.jpg';
+                if (document.getElementById('butlerInfo')) {
+                    document.getElementById('butlerInfo').textContent = data.butler !== null ? data.butler : 'N/A';
+                }
+                if (document.getElementById('preferenceInfo')) {
+                    document.getElementById('preferenceInfo').textContent = data.preference !== null ? data.preference : 'N/A';
+                }
+                if (document.getElementById('allergiesInfo')) {
+                    document.getElementById('allergiesInfo').textContent = data.alergies !== null ? data.alergies : 'N/A';
+                }
+                if (document.getElementById('profileName')) {
+                    document.getElementById('profileName').textContent = (data.name ? data.name + ' ' : '') + (data.lastName || 'N/A');
+                }
+                if (document.getElementById('observationsInfo')) {
+                    document.getElementById('observationsInfo').textContent = data.notes !== null ? data.notes : 'N/A';
+                }
+                if (document.getElementById('profileImage')) {
+                    document.getElementById('profileImage').src = data.profileImageURL ? data.profileImageURL : 'https://i.postimg.cc/jj0LRs1q/Aqualover-logo.jpg';
+                }
+
+                // Images carousel fillment
+                const carouselInner = document.getElementById('carouselImages');
+                carouselInner.innerHTML = ''; // this cleans the previous images
+                const images = data.images || []; // we will supouse that images is an array
+                if (images.lenght > 0) {
+                    images.forEach((imageURL, index) => {
+                        const imageElement = document.createElement('img');
+                        imageElement.src = imageURL;
+                        imageElement.alt = `Image ${index + 1}`;
+                        imageElement.classList.add('carousel-item');
+                        carouselInner.appendChild(dafaultImageElement);
+                    })
                 }
             } catch (error) {
                 console.error('Error al obtener los datos:', error);
@@ -298,7 +329,7 @@
             }
         });
     </script>
-    
+
 </body>
 
 </html>
