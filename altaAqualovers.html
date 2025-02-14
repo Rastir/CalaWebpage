@@ -180,7 +180,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control form-control-user" id="email"
-                                    placeholder="Email Address">
+                                    placeholder="Direccion de correo electronico">
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
@@ -211,6 +211,22 @@
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="alergias"
                                     placeholder="¿Alergias?">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="image"
+                                    placeholder="ingresar url de fotografía">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="amaMoment"
+                                    placeholder="ingresar url de ultimo 'Aqua Moment' ">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="firstVisit"
+                                    placeholder="primer visita">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="lastVisit"
+                                    placeholder="ultima visita">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="observaciones"
@@ -341,6 +357,10 @@
                             preference: document.getElementById('servicioMayordomia').value,
                             alergies: document.getElementById('alergias').value,
                             notes: document.getElementById('observaciones').value,
+                            image: document.getElementById('image').value,
+                            amaMoments: document.getElementById('amaMoment').value,
+                            firstVisit: document.getElementById('firstVisit').value,
+                            lastVisit: document.getElementById('lastVisit').value,
                             aquaLevel: [],
                             lal: true  // Puedes ajustar esto si es necesario
                         };
