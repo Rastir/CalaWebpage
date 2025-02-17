@@ -226,6 +226,22 @@
                                     placeholder="¿Alergias?">
                             </div>
                             <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="image"
+                                    placeholder="ingresar url de fotografía">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="amaMoments"
+                                    placeholder="ingresar url de ultimo 'Aqua Moment' ">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="firstVisit"
+                                    placeholder="primer visita">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="lastVisit"
+                                    placeholder="ultima visita">
+                            </div>
+                            <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="observaciones"
                                     placeholder="¿Alguna observación referente al huésped?">
                             </div>
@@ -353,6 +369,10 @@
                             document.getElementById('mayordomos').value = datos.butler;
                             document.getElementById('servicioMayordomia').value = datos.preference;
                             document.getElementById('alergias').value = datos.alergies;
+                            document.getElementById('image').value = datos.image;
+                            document.getElementById('amaMoments').value = datos.amaMoments;
+                            document.getElementById('firstVisit').value = datos.firstVisit;
+                            document.getElementById('lastVisit').value = datos.lastVisit;
                             document.getElementById('observaciones').value = datos.notes;
                         } catch (error) {
                             console.error('Error:', error);
@@ -380,6 +400,10 @@
                             butler: document.getElementById('mayordomos').value,
                             preference: document.getElementById('servicioMayordomia').value,
                             alergies: document.getElementById('alergias').value,
+                            image: document.getElementById('image'.value),
+                            amaMoments: document.getElementById('amaMoments').value,
+                            firstVisit: document.getElementById('firstVisit').value,
+                            lastVisit: document.getElementById('lastVisit').value,
                             notes: document.getElementById('observaciones').value
                         };
 
