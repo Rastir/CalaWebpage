@@ -12,6 +12,7 @@
     <title>C.A.L.A</title>
 
     <!-- Custom fonts for this template-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -138,11 +139,12 @@
                     </button>
 
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">¡Bienvenidos!</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Agregar Aqua friend</h1>
                     </div>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
+
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
@@ -183,7 +185,7 @@
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Cerrar sesion!
                                 </a>
                             </div>
                         </li>
@@ -195,28 +197,12 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <!-- Content Row ////////////// AQUI ! /////////// -->
-
-
-
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Corregir datos</h1>
-                            <p>Por favor, corrige o actualiza los datos del huésped, verifica que el "ID" del huésped
-                                sea el correcto y que los datos ingresados sean los correctos.</p>
+                            <h1 class="h4 text-gray-900 mb-4">Ingresar datos</h1>
+                            <p>Ingresa los datos del agente de viajes a registrar, verifica que los datos ingresados sean los
+                                correctos.</p>
                         </div>
-                        <hr>
-                        <form class="user">
-                            <div class="form-group row">
-                                <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <input type="text" class="form-control form-control-user" id="idAquaLover"
-                                        placeholder="Id del Aqua Lover ?">
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-facebook btn-user btn-block" id="buscarAquaLover">
-                                <i class="fa-solid fa-magnifying-glass"></i> BUSCAR AQUA LOVER
-                            </button>
-                        </form>
-                        <hr>
                         <form class="user">
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
@@ -230,7 +216,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control form-control-user" id="email"
-                                    placeholder="Email Address">
+                                    placeholder="Direccion de correo electronico">
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
@@ -241,6 +227,14 @@
                                     <input type="text" class="form-control form-control-user" id="visita"
                                         placeholder="Numero de visita">
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="profit"
+                                    placeholder="ingresos generados al hotel aproximados">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="noReferals"
+                                    placeholder="Numero de huespedes referidos">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="alimentos"
@@ -256,18 +250,22 @@
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="servicioMayordomia"
-                                    placeholder="¿Preferencias del servicio de mayordomía?">
+                                    placeholder="¿Preferencias del servicio de mayordomia?">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="alergias"
                                     placeholder="¿Alergias?">
                             </div>
                             <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="observaciones"
+                                    placeholder="¿Alguna observación referente al huésped?">
+                            </div>
+                            <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="image"
                                     placeholder="ingresar url de fotografía">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="amaMoments"
+                                <input type="text" class="form-control form-control-user" id="amaMoment"
                                     placeholder="ingresar url de ultimo 'Aqua Moment' ">
                             </div>
                             <div class="form-group">
@@ -278,37 +276,36 @@
                                 <input type="text" class="form-control form-control-user" id="lastVisit"
                                     placeholder="ultima visita">
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="observaciones"
-                                    placeholder="¿Alguna observación referente al huésped?">
-                            </div>
                             <hr>
-                            <button type="button" class="btn btn-facebook btn-user btn-block" id="modificarAquaLover">
-                                <i class="fa-solid fa-wand-magic-sparkles"></i> MODIFICAR AQUA LOVER
+                            <button type="button" class="btn btn-facebook btn-user btn-block" id="agregarAquafriend">
+                                <i class="fa-solid fa-check"></i> Agregar Aquafriend
                             </button>
                         </form>
                         <div id="mensaje" style="display:none; color: green; text-align: center; margin-top: 20px;">
-                            Persona modificada exitosamente
+                            Aquafriend registrada exitosamente
                         </div>
 
+                        <!-- Modal -->
                         <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog"
                             aria-labelledby="confirmModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="confirmModalLabel">Confirmar cambios</h5>
+                                        <h5 class="modal-title">Confirmar registro</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        ¿Seguro que desea confirmar los cambios?
+                                        ¿Seguro que desea registrar a este Aquafriend?
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger"
-                                            data-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-success"
-                                            id="confirmarCambios">Confirmar</button>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-success"
+                                                id="confirmarRegistro">Confirmar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -318,7 +315,6 @@
                         <script
                             src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
                         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
 
 
                         <!-- End of Main Content -->
@@ -346,16 +342,16 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">¿Aquí espantan?</h5>
                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.
+                            <div class="modal-body">¡Amonos! Si quieres salir oprime el boton correspondiente abajo.
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-primary" href="login.html">Logout</a>
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                <a class="btn btn-primary" href="login.html">Fuga</a>
                             </div>
                         </div>
                     </div>
@@ -364,6 +360,9 @@
                 <!-- Bootstrap core JavaScript-->
                 <script src="vendor/jquery/jquery.min.js"></script>
                 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+                <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
                 <!-- Core plugin JavaScript-->
                 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -381,89 +380,58 @@
                 <!-- Font Awesome script-->
                 <script src="https://kit.fontawesome.com/ec5d2cd8cd.js" crossorigin="anonymous"></script>
 
-
-                <!-- Here goes the script for searching the aqualover by ID and editing ! -->
-
+                <!-- Heres the script for the json creation-->
                 <script>
-                    // Código para buscar Aqua Lover
-                    document.getElementById('buscarAquaLover').addEventListener('click', async () => {
-                        const id = document.getElementById('idAquaLover').value;
-
-                        try {
-                            const response = await fetch(`http://vps-4437505-x.dattaweb.com:8080/personas/traer/${id}`);
-                            if (!response.ok) {
-                                throw new Error('Network response was not ok ' + response.statusText);
-                            }
-                            const datos = await response.json();
-
-                            document.getElementById('nombre').value = datos.name;
-                            document.getElementById('apellido').value = datos.lastName;
-                            document.getElementById('email').value = datos.email;
-                            document.getElementById('edad').value = datos.age;
-                            document.getElementById('visita').value = datos.noVisit;
-                            document.getElementById('alimentos').value = datos.foodAndBeverages;
-                            document.getElementById('experiencia').value = datos.experience;
-                            document.getElementById('mayordomos').value = datos.butler;
-                            document.getElementById('servicioMayordomia').value = datos.preference;
-                            document.getElementById('alergias').value = datos.alergies;
-                            document.getElementById('image').value = datos.image;
-                            document.getElementById('amaMoments').value = datos.amaMoments;
-                            document.getElementById('firstVisit').value = datos.firstVisit;
-                            document.getElementById('lastVisit').value = datos.lastVisit;
-                            document.getElementById('observaciones').value = datos.notes;
-                        } catch (error) {
-                            console.error('Error:', error);
-                        }
-                    });
-
-                    // Código para modificar Aqua Lover
-                    document.getElementById('modificarAquaLover').addEventListener('click', function () {
+                    document.getElementById('agregarAquafriend').addEventListener('click', function () {
                         $('#confirmModal').modal('show');
                     });
 
-                    document.getElementById('confirmarCambios').addEventListener('click', async function () {
+                    document.getElementById('confirmarRegistro').addEventListener('click', async function () {
                         $('#confirmModal').modal('hide');
 
-                        const id = document.getElementById('idAquaLover').value;
                         const datos = {
-                            id_persona: document.getElementById('idAquaLover').value,
                             name: document.getElementById('nombre').value,
                             lastName: document.getElementById('apellido').value,
                             email: document.getElementById('email').value,
                             age: parseInt(document.getElementById('edad').value),
                             noVisit: parseInt(document.getElementById('visita').value),
+                            profit: parseInt(document.getElementById('profit').value),
+                            noReferals: parseInt(document.getElementById('noReferals').value),
                             foodAndBeverages: document.getElementById('alimentos').value,
                             experience: document.getElementById('experiencia').value,
                             butler: document.getElementById('mayordomos').value,
                             preference: document.getElementById('servicioMayordomia').value,
                             alergies: document.getElementById('alergias').value,
-                            image: document.getElementById('image'.value),
-                            amaMoments: document.getElementById('amaMoments').value,
+                            notes: document.getElementById('observaciones').value,
+                            image: document.getElementById('image').value,
+                            amaMoments: document.getElementById('amaMoment').value,
                             firstVisit: document.getElementById('firstVisit').value,
-                            lastVisit: document.getElementById('lastVisit').value,
-                            notes: document.getElementById('observaciones').value
+                            lastVisit: document.getElementById('lastVisit').value
                         };
 
+                        const datosJSON = JSON.stringify(datos);
+                        console.log('Datos a enviar:', datosJSON);
+
                         try {
-                            const response = await fetch(`http://vps-4437505-x.dattaweb.com:8080/personas/editar`, {
-                                method: 'PUT',
+                            const response = await fetch('http://vps-4437505-x.dattaweb.com:8080/aquafriend/crear', {
+                                method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'
                                 },
-                                body: JSON.stringify(datos)
+                                body: datosJSON
                             });
 
                             const responseBody = await response.text();
                             console.log('Cuerpo de la respuesta:', responseBody);
 
                             if (response.ok) {
-                                console.log('Modificación exitosa:', responseBody);
+                                console.log('Registro exitoso:', responseBody);
                                 document.getElementById('mensaje').style.display = "block";
-                                setTimeout(function () {
-                                    document.getElementById('mensaje').style.display = "none";
-                                }, 3000);
+                                setTimeout(() => {
+                                    window.location.href = "altaAquafriendExitoso.html"; // Cambia "nueva_pagina.html" por la URL de la página a la que quieras redirigir
+                                }, 1500); // 3000 milisegundos = 3 segundos
                             } else {
-                                console.error('Error en la modificación:', responseBody);
+                                console.error('Error en el registro:', responseBody);
                             }
                         } catch (error) {
                             console.error('Error en la solicitud:', error);
@@ -472,15 +440,5 @@
                 </script>
 
 
-                <style>
-                    .fixed-size {
-                        width: 100%;
-                        height: 400px;
-                        /* Ajusta la altura según tus necesidades */
-                        object-fit: cover;
-                    }
-                </style>
-
 </body>
-
 </html>
